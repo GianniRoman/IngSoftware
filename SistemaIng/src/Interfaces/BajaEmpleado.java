@@ -151,8 +151,7 @@ public class BajaEmpleado extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_DarBaja
 
-<<<<<<< HEAD
-=======
+
     private void EnterLegajo(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_EnterLegajo
         if(evt.getKeyChar() == 10)
         {
@@ -160,20 +159,19 @@ public class BajaEmpleado extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_EnterLegajo
 
->>>>>>> origin/LautiChanges
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
         new VistaGerente().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-<<<<<<< HEAD
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         new ListadoEmpleados().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-=======
->>>>>>> origin/LautiChanges
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
