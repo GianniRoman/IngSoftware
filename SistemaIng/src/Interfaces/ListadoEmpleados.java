@@ -10,15 +10,10 @@ import Modelos.Empleado;
 import java.sql.SQLException;
 import javax.swing.DefaultListModel;
 
-/**
- *
- * @author glupi
- */
+
 public class ListadoEmpleados extends javax.swing.JFrame {
     DefaultListModel modeloLista = new DefaultListModel();
-    /**
-     * Creates new form ListadoEmpleados
-     */
+    
     public ListadoEmpleados() {
         initComponents();
         jList1.setModel(modeloLista);
