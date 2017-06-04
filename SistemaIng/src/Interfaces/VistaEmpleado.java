@@ -59,12 +59,7 @@ public class VistaEmpleado extends javax.swing.JFrame {
 
         jButton4.setText("Info Plantel");
 
-        jButton5.setText("Modificar Vaca");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
+        jButton5.setText("Modificar Plantel");
 
         jButton6.setText("Salir");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -132,11 +127,6 @@ public class VistaEmpleado extends javax.swing.JFrame {
         this.setVisible(false);
         new LogIn().setVisible(true);
     }//GEN-LAST:event_VolverAInicio
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.setVisible(false);
-        new ListadoDeVacas().setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
