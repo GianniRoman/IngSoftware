@@ -187,7 +187,7 @@ public class ContratarEmpleado extends javax.swing.JFrame {
                         {                  
                                 System.out.println("Dni duplicado, no se puede registrar empleado");
                         }else{
-                            conexion.getS().executeUpdate("INSERT into empleado values('"+nuevoEmpleado.getlegajo()+"','"+nuevoEmpleado.getDni()+"','"+nuevoEmpleado.getNombre()+"','"+nuevoEmpleado.getApellido()+"','"+nuevoEmpleado.getTelefono()+"');");
+                            conexion.getS().executeUpdate("INSERT into empleado values('"+nuevoEmpleado.getlegajo()+"','"+nuevoEmpleado.getDni()+"','"+nuevoEmpleado.getNombre()+"','"+nuevoEmpleado.getTelefono()+"','"+nuevoEmpleado.getApellido()+"');");
                             Usuario nuevoUsuario = new Usuario(Usuario.getText(),"12345",2,0,nuevoEmpleado.getDni());
                             conexion.getS().executeUpdate("INSERT into usuario values ('"+nuevoUsuario.getNombre()+"','"+12345+"','"+2+"','"+0+"','"+nuevoEmpleado.getDni()+"');");
                             this.setVisible(false);
