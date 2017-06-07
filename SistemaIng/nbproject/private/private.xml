@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/glupi/OneDrive/Documentos/GitHub/IngSoftware/SistemaIng/src/Interfaces/ListadoDeVacas.java</file>
+            <file>file:/C:/Users/glupi/OneDrive/Documentos/GitHub/IngSoftware/SistemaIng/src/Interfaces/ListadoEmpleados.java</file>
+            <file>file:/C:/Users/glupi/OneDrive/Documentos/GitHub/IngSoftware/SistemaIng/src/Modelos/Empleado.java</file>
             <file>file:/C:/Users/glupi/OneDrive/Documentos/GitHub/IngSoftware/SistemaIng/src/Interfaces/BajaEmpleado.java</file>
+            <file>file:/C:/Users/glupi/OneDrive/Documentos/GitHub/IngSoftware/SistemaIng/src/Modelos/ConexionBD.java</file>
+            <file>file:/C:/Users/glupi/OneDrive/Documentos/GitHub/IngSoftware/SistemaIng/src/Interfaces/ContratarEmpleado.java</file>
+            <file>file:/C:/Users/glupi/OneDrive/Documentos/GitHub/IngSoftware/SistemaIng/src/Interfaces/VerificacionContraseña.java</file>
         </group>
     </open-files>
 </project-private>

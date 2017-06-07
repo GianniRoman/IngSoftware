@@ -9,10 +9,13 @@ import Modelos.ConexionBD;
 import Modelos.Empleado;
 import java.sql.SQLException;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 
 public class ListadoEmpleados extends javax.swing.JFrame {
     DefaultListModel modeloLista = new DefaultListModel();
+    Empleado emp = new Empleado();
+    int selcemp = 0;
     
     public ListadoEmpleados() {
         initComponents();
@@ -28,13 +31,13 @@ public class ListadoEmpleados extends javax.swing.JFrame {
             conexion.setS(conexion.getConexion().createStatement());
             conexion.setRs(conexion.getS().executeQuery("SELECT * FROM empleado"));
             while(conexion.getRs().next()){
-                Empleado emp = new Empleado();
-                emp.setApellido(conexion.getRs().getString("apellido"));
-                emp.setNombre(conexion.getRs().getString("nombre"));
-                emp.setDni(conexion.getRs().getString("dni"));
-                emp.setTelefono(conexion.getRs().getString("telefono"));
-                emp.setlegajo(conexion.getRs().getString("elegajo"));
-                modeloLista.addElement(emp);
+                Empleado empNvo = new Empleado();
+                empNvo.setApellido(conexion.getRs().getString("apellido"));
+                empNvo.setNombre(conexion.getRs().getString("nombre"));
+                empNvo.setDni(conexion.getRs().getString("dni"));
+                empNvo.setTelefono(conexion.getRs().getString("telefono"));
+                empNvo.setlegajo(conexion.getRs().getString("elegajo"));
+                modeloLista.addElement(empNvo);
             }
         }
         catch(SQLException ex){
@@ -90,6 +93,11 @@ public class ListadoEmpleados extends javax.swing.JFrame {
         });
 
         jButton2.setText("Seleccionar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,17 +168,29 @@ public class ListadoEmpleados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
+        selcemp = 1;
         int index= jList1.getSelectedIndex();
-        Empleado emp=(Empleado)modeloLista.getElementAt(index);
-        lblDni.setText(emp.getDni());
-        lblLjo.setText(emp.getlegajo());
-        lblTel.setText(emp.getTelefono());
+        Empleado emplst=(Empleado)modeloLista.getElementAt(index);
+        emp = emplst;
+        lblDni.setText(emplst.getDni());
+        lblLjo.setText(emplst.getlegajo());
+        lblTel.setText(emplst.getTelefono());
     }//GEN-LAST:event_jList1ValueChanged
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new BajaEmpleado().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if(selcemp==1){
+            new BajaEmpleado(emp).setVisible(true);
+            this.setVisible(false);
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Debe seleccionar un empleado de la lista para continuar", "¡Ningun empleado seleccionado!", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

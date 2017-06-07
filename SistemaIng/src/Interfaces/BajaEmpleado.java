@@ -1,6 +1,7 @@
 package Interfaces;
 import Modelos.ConexionBD;
 import Modelos.Empleado;
+import java.awt.Font;
 import java.sql.SQLException;
 
 
@@ -8,11 +9,18 @@ public class BajaEmpleado extends javax.swing.JFrame {
     ConexionBD conexion = new ConexionBD();
     String eLegajo;
     String dni;
+    Font fuente = new Font("Calibri", 1, 38);
     
    
     public BajaEmpleado() {
         initComponents();
         this.setLocationRelativeTo(null);
+    }
+    
+    public BajaEmpleado(Empleado emp){
+        initComponents();
+        this.setLocationRelativeTo(null);
+        jTextPane2.setText("Legajo:"+emp.getlegajo()+"\nNombre:"+emp.getNombre()+"\nApellido: "+emp.getApellido()+"\nDNI:"+emp.getDni()+"\nTelefono:"+emp.getTelefono());
     }
 
     @SuppressWarnings("unchecked")
